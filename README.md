@@ -1,4 +1,4 @@
-# Creating a professional README file is crucial for making your project accessible and easy to understand for other developers. Below is a detailed README template for your HTML, CSS, JS, and Django project:
+# RecycleBytes
 
 ---
 
