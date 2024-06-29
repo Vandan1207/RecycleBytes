@@ -5,7 +5,7 @@
 # E-Waste Collection and Recycling Platform
 
 ## Project Overview
-This project is a web application for e-waste collection and recycling. Users can exchange their e-waste for money through this platform. The project is built using HTML, CSS, JavaScript, and Django.
+This project is a web application for e-waste collection and recycling. Users can exchange their e-waste for money through this platform. The project is built using HTML, CSS,Bootstrap, JavaScript, and Django.
 
 ## Table of Contents
 1. [Requirements](#requirements)
@@ -40,8 +40,8 @@ Download and install XAMPP from [apachefriends.org](https://www.apachefriends.or
 Use pip to install the necessary packages:
 
 bash
-pip install cart
-pip install mysqlclient
+pip install cart \n
+pip install mysqlclient \n
 pip install django
 
 
