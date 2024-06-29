@@ -40,8 +40,10 @@ Download and install XAMPP from [apachefriends.org](https://www.apachefriends.or
 Use pip to install the necessary packages:
 
 bash
-pip install cart \n
-pip install mysqlclient \n
+pip install cart 
+<br>
+pip install mysqlclient 
+<br>
 pip install django
 
 
