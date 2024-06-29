@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>RecycleBytes Admin panel</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/Frame262.png' %}" rel="icon">
+  <link href="{% static 'assets/img/Frame262.pmg' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/quill/quill.snow.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/quill/quill.bubble.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/simple-datatables/style.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Jan 09 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="{% url 'adminhomepage'%}" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">RecycleBytes Admin</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+        </li><!-- End Messages Nav -->
+
+          
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="{% url 'adminhomepage' %}">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Manage categories</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{% url  'addcategories' %}">
+              <i class="bi bi-circle"></i><span>Add Categories</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'showcategories'  %}">
+              <i class="bi bi-circle"></i><span>Show Categories</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Components Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Manage Subcategories</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{% url 'addsubcategory' %}">
+              <i class="bi bi-circle"></i><span>Add SubCategories</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'showsubcategory' %}">
+              <i class="bi bi-circle"></i><span>Show Subategories</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Components Nav -->
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Delivery Boy</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{% url 'add_deliveryboy' %}">
+              <i class="bi bi-circle"></i><span>Add Delivery Boy</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'managedeliveryboy' %}">
+              <i class="bi bi-circle"></i><span>Manage Delivery Boy</span>
+            </a>
+            <a href="{% url 'requestdeliveryboy' %}">
+              <i class="bi bi-circle"></i><span>Request Delivery Boy</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Forms Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>E-waste</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>Add E-waste</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'pickupview'  %}">
+              <i class="bi bi-circle"></i><span>Total Order</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>Manage E-Scrapper</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Tables Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-bar-chart"></i><span>Customer</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{% url 'addcoustomer' %}">
+              <i class="bi bi-circle"></i><span>Add Customer</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'managecustomer' %}">
+              <i class="bi bi-circle"></i><span>Manage Customer</span>
+            </a>
+          </li>
+         
+        </ul>
+      </li><!-- End Charts Nav -->
+
+      
+        
+      
+    
+
+      <li class="nav-heading">Pages</li>
+
+     
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'managefeedback' %}">
+          <i class="bi bi-question-circle"></i>
+          <span>Manage Feedback </span>
+        </a>
+      </li><!-- End F.A.Q Page Nav -->
+
+      
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'logout' %}">
+          <i class="bi bi-dash-circle"></i>
+          <span>Logout</span>
+        </a>
+      </li><!-- End Error 404 Page Nav -->
+
+      
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+<main id="main" class="main">
+ {% block content%}
+ {% endblock %}
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+  </footer><!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="{% static 'assets/vendor/apexcharts/apexcharts.min.js' %}"></script>
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %} "></script>
+<script src="{% static 'assets/vendor/chart.js/chart.umd.js' %}"></script>
+<script src="{% static 'assets/vendor/echarts/echarts.min.js' %}"></script>
+<script src="{% static 'assets/vendor/quill/quill.min.js '%}"></script>
+<script src="{% static 'assets/vendor/simple-datatables/simple-datatables.js' %}"></script>
+<script src="{% static 'assets/vendor/tinymce/tinymce.min.js '%}"></script>
+<script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+<!-- Template Main JS File -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
