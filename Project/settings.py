@@ -143,7 +143,7 @@ EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "vandanthakkar942@gmail.com"
-EMAIL_HOST_PASSWORD = "kzzudponteorbuux"
+EMAIL_HOST_PASSWORD = ""
 
 RAZOR_KEY_ID = 'rzp_test_Dll1w0rbrwAzml'
 RAZOR_KEY_SECRET = 'UayrU8GYMA1vBIKK1AwjHCiJ'
